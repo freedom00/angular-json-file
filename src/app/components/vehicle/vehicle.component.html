@@ -1,0 +1,52 @@
+<div class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+        <div class="form-group">
+          <select (ngModelChange)="onYearsChange($event)" [(ngModel)]="vehicle.year" class="form-control">
+            <option value="">Year</option>
+            <option *ngFor="let year of years" [value]="year">{{year}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="form-group">
+          <select (ngModelChange)="onMakesChange($event)" [(ngModel)]="vehicle.make" class="form-control">
+            <option value="">Make</option>
+            <option *ngFor="let make of makes" [value]="make">{{make}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="form-group">
+          <select (ngModelChange)="onModelsChange($event)" [(ngModel)]="vehicle.model" class="form-control">
+            <option value="">Model</option>
+            <option *ngFor="let model of models" [value]="model">{{model}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-group">
+          <select [(ngModel)]="vehicle.trim" class="form-control">
+            <option value="">Trim</option>
+            <option *ngFor="let trim of trims" [value]="trim">{{trim}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-2">
+        <label>{{vehicle.year}}</label>
+      </div>
+      <div class="col-lg-3">
+        <label>{{vehicle.make}}</label>
+      </div>
+      <div class="col-lg-3">
+        <label>{{vehicle.model}}</label>
+      </div>
+      <div class="col-lg-4">
+        <label>{{vehicle.trim}}</label>
+      </div>
+    </div>
+  </div>
+</div>
